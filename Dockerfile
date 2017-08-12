@@ -10,6 +10,7 @@ RUN apt-get update -qq \
     cron \
     rsync \
     openssh-client \
+    tar \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
