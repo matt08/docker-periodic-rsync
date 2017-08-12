@@ -11,6 +11,7 @@ RUN apt-get update -qq \
     rsync \
     openssh-client \
     tar \
+    wget \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
