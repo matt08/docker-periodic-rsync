@@ -1,15 +1,7 @@
 docker-periodic-rsync
 =====================
 
-***docker-periodic-rsync*** is a [*Docker*](http://www.docker.com/) image based on *Debian 8* with *cron*, *ssh* and [*rsync*](http://en.wikipedia.org/wiki/Rsync) for one-time or periodic remote *rsync* copy jobs.
-
-Open source project:
-
-- <i class="fa fa-fw fa-home"></i> home: <http://gw.tnode.com/docker/periodic-rsync/>
-- <i class="fa fa-fw fa-github-square"></i> github: <http://github.com/gw0/docker-periodic-rsync/>
-- <i class="fa fa-fw fa-laptop"></i> technology: *debian*, *cron*, *ssh*, *rsync*
-- <i class="fa fa-fw fa-database"></i> docker hub: <https://hub.docker.com/r/gw000/periodic-rsync/>
-
+***docker-periodic-rsync*** is a [*Docker*](http://www.docker.com/) image based on *Debian 8* with *cron*, *ssh*, *tar*, *wget* and [*rsync*](http://en.wikipedia.org/wiki/Rsync) for one-time or periodic remote *rsync* copy jobs.
 
 Usage
 =====
@@ -19,7 +11,7 @@ Requirements:
 - setup passwordless SSH login on remote machines ([setup](http://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/))
 - `/root/.ssh`: mount your passwordless SSH public and private keys (`id_rsa`/`id_rsa.pub`, chown to user `root`)
 - `/data`: mount preferred target directory
-- `/etc/crontab`: mount your crontab file (for periodic usage)
+- `/etc/cron.d`: mount your crontab file (for periodic usage)
 
 For one-time usage (need specify command):
 
@@ -45,7 +37,7 @@ $ docker run -d -v /srv/backup/.ssh:/root/.ssh -v /srv/backup/cron.d:/etc/cron.d
 Feedback
 ========
 
-If you encounter any bugs or have feature requests, please file them in the [issue tracker](http://github.com/gw0/docker-periodic-rsync/issues/) or even develop it yourself and submit a pull request over [GitHub](http://github.com/gw0/docker-periodic-rsync/).
+If you encounter any bugs or have feature requests, please file them in the [issue tracker](https://github.com/matt08/docker-periodic-rsync/issues/) or even develop it yourself and submit a pull request over [GitHub](https://github.com/matt08/docker-periodic-rsync/).
 
 
 License
